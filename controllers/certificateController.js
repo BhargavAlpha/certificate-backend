@@ -5,8 +5,8 @@ const fs = require('fs');
 const {readFile, writeFile, unlink} = require('fs').promises;
 const { join } = require('path');
 
-const serviceAccount = require('./keys.json');
 
+const serviceAccount = require('./keys.json');
 const auth = new google.auth.JWT(
   serviceAccount.client_email,
   null,

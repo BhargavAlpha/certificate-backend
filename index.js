@@ -4,7 +4,7 @@ const cors=require('cors');
 const dbConnect = require('./dbConnect');
 const bodyParser = require('body-parser');
 const {getCertificates,uploadToDrive}=require('./controllers/certificateController');
-
+require('dotenv').config();
 app.use(cors());
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));   
