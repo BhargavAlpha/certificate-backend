@@ -81,7 +81,7 @@ const uploadToDrive = async (req, res) => {
       await newCertificate.save();
       console.log('Certificate saved successfully.');
       await fs.promises.unlink(outputPath);
-      res.status(200).json({ message: 'File uploaded successfully', fileId: response.data.id });
+      res.status(200).json({ message: 'File uploaded successfully', link: response.data.webViewLink });
     } catch (error) {
       console.log('Error uploading to Google Drive:', error);
       res.status(500).json({ error: 'Error uploading to Google Drive' });
