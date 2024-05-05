@@ -6,9 +6,6 @@ const bodyParser = require('body-parser');
 const {getCertificates,uploadToDrive}=require('./controllers/certificateController');
 require('dotenv').config();
 app.use(cors());
-app.use(cors({
-    origin: 'https://certificate-generator-frontend-psi.vercel.app'
-  }));
 app.use(express.json());
 app.use(bodyParser.urlencoded({extended:true}));   
 
